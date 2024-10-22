@@ -126,3 +126,4 @@ celerybeat.pid
 .venv
 env/
 venv/
+credit_card_env/
