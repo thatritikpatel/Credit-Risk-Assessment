@@ -15,6 +15,41 @@ This project implements a machine learning solution for credit card default pred
 - Provide insights for risk management and decision-making
 - Help banks control cash flow and manage credit risk effectively
 
+## Tech Stack
+- Python 3.8+
+- MongoDB
+- Machine Learning Libraries:
+  - scikit-learn
+  - pandas
+  - numpy
+- Web Framework:
+  - Flask
+- Development Tools:
+  - Git
+  - pytest (for testing)
+  - Docker (for containerization)
+
+## Project Structure
+```
+sensor_fault_detection/
+├── src/
+│   ├── components/
+│   │   ├── data_ingestion.py
+│   │   ├── data_transformation.py
+│   │   └── model_trainer.py
+│   ├── pipeline/
+│   │   └── train_pipeline.py
+│   ├── exception.py
+│   └── utils.py
+├── tests/
+├── config/
+├── artifacts/
+├── notebooks/
+├── app.py
+├── requirements.txt
+└── README.md
+```
+
 ## 🏗️ Architecture
 The project follows a modular architecture with four main components:
 
@@ -45,13 +80,49 @@ The dataset contains credit card client data from Taiwan (April 2005 to Septembe
 - Bill statements
 
 ### Features
-- **ID**: Client identifier
-- **LIMIT_BAL**: Credit amount in NT dollars
-- **Demographic**: Gender, Education, Marriage, Age
-- **Payment Status**: Monthly payment records (PAY_0 to PAY_6)
-- **Bill Amounts**: Monthly bill statements (BILL_AMT1 to BILL_AMT6)
-- **Payment Amounts**: Previous payments (PAY_AMT1 to PAY_AMT6)
-- **Target**: Default payment next month (1=yes, 0=no)
+
+- **ID**: ID of each client
+- **LIMIT_BAL**: Amount of given credit in NT dollars (includes individual and family/supplementary credit)
+- **SEX**: Gender (1=male, 2=female)
+- **EDUCATION**: 
+  - 1: Graduate school 
+  - 2: University 
+  - 3: High school 
+  - 4: Others 
+  - 5: Unknown 
+  - 6: Unknown
+- **MARRIAGE**: Marital status 
+  - 1: Married 
+  - 2: Single 
+  - 3: Others
+- **AGE**: Age in years
+- **PAY_0**: Repayment status in September, 2005 
+  - -1: Pay duly 
+  - 1: Payment delay for one month 
+  - 2: Payment delay for two months 
+  - … 
+  - 8: Payment delay for eight months 
+  - 9: Payment delay for nine months and above
+- **PAY_2**: Repayment status in August, 2005 (scale same as above)
+- **PAY_3**: Repayment status in July, 2005 (scale same as above)
+- **PAY_4**: Repayment status in June, 2005 (scale same as above)
+- **PAY_5**: Repayment status in May, 2005 (scale same as above)
+- **PAY_6**: Repayment status in April, 2005 (scale same as above)
+- **BILL_AMT1**: Amount of bill statement in September, 2005 (NT dollar)
+- **BILL_AMT2**: Amount of bill statement in August, 2005 (NT dollar)
+- **BILL_AMT3**: Amount of bill statement in July, 2005 (NT dollar)
+- **BILL_AMT4**: Amount of bill statement in June, 2005 (NT dollar)
+- **BILL_AMT5**: Amount of bill statement in May, 2005 (NT dollar)
+- **BILL_AMT6**: Amount of bill statement in April, 2005 (NT dollar)
+- **PAY_AMT1**: Amount of previous payment in September, 2005 (NT dollar)
+- **PAY_AMT2**: Amount of previous payment in August, 2005 (NT dollar)
+- **PAY_AMT3**: Amount of previous payment in July, 2005 (NT dollar)
+- **PAY_AMT4**: Amount of previous payment in June, 2005 (NT dollar)
+- **PAY_AMT5**: Amount of previous payment in May, 2005 (NT dollar)
+- **PAY_AMT6**: Amount of previous payment in April, 2005 (NT dollar)
+- **default.payment.next.month**: Default payment (1=yes, 0=no)
+
+
 
 ## 🔑 Key Findings
 1. **Low Repayment Revenue**
@@ -143,4 +214,7 @@ This project is available under the MIT License.
 ## 🙏 Acknowledgements
 - UCI Machine Learning Repository
 - Taiwan Credit Card Dataset contributors
-- Lichman, M. (2013). UCI Machine Learning Repository
+
+
+## Contact
+- Ritik Patel - [ritik.patel129@gmail.com]
