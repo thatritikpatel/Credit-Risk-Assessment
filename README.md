@@ -76,6 +76,8 @@ The project follows a modular architecture with four main components:
    - Generates performance metrics and reports
 
 ## 📊 Dataset Information
+The dataset can be found on [Kaggle](https://www.kaggle.com/uciml/default-of-credit-card-clients-dataset) or at [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients)  
+
 The dataset contains credit card client data from Taiwan (April 2005 to September 2005), including:
 - Default payments information
 - Demographic factors
