@@ -6,10 +6,9 @@
 ## Author
 [Ritik Patel](https://github.com/thatritikpatel)
 
-## Screenshots
 
-### Prediction Page
-![Prediction Page](screenshots\image.png)
+# Default Payment Prediction
+![Prediction Page](https://github.com/thatritikpatel/Credit-Risk-Assessment/blob/main/screenshots/image.png)
 
 ## Project Overview
 This project implements a machine learning solution for credit card default prediction using historical transaction data from Taiwan. The system helps identify key factors determining credit card default likelihood and provides an automated model for predicting default risk.
