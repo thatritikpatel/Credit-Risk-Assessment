@@ -35,7 +35,7 @@ This project implements a machine learning solution for credit card default pred
 
 ## Project Structure
 ```
-sensor_fault_detection/
+credit_risk_assessment/
 ├── src/
 │   ├── components/
 │   │   ├── data_ingestion.py
