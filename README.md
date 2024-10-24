@@ -1,6 +1,6 @@
 # Credit Risk Assessment
 
-[![Python](https://img.shields.io/badge/Python-3.7%2B-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-4.2-green.svg)](https://www.mongodb.com/)
 
 ## Author
@@ -175,7 +175,7 @@ Werkzeug==2.2.2
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.7+
+- Python 3.8+
 - MongoDB 4.2+
 - pip package manager
 
