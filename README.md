@@ -237,4 +237,4 @@ This project is available under the MIT License.
 
 
 ## Contact
-- Ritik Patel - [ritik.patel129@gmail.com]
+- Ritik Patel - [https://www.linkedin.com/in/thatritikpatel/]
